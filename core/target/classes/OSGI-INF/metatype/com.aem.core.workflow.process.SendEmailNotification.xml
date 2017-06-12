@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><metatype:MetaData xmlns:metatype="http://www.osgi.org/xmlns/metatype/v1.0.0" localization="OSGI-INF/metatype/com.aem.core.workflow.process.SendEmailNotification">
+    <OCD id="com.aem.core.workflow.process.SendEmailNotification" name="%com.aem.core.workflow.process.SendEmailNotification.name" description="%com.aem.core.workflow.process.SendEmailNotification.description"/>
+    <Designate pid="com.aem.core.workflow.process.SendEmailNotification">
+        <Object ocdref="com.aem.core.workflow.process.SendEmailNotification"/>
+    </Designate>
+</metatype:MetaData>

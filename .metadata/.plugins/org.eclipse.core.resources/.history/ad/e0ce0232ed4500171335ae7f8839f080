@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Monitor interval 180 seconds -->
+<Configuration status="INFO" monitorInterval="180">
+	<Properties>
+		<Property name="filename">logs/hello-world.log</Property>
+	</Properties>
+	<Appenders>
+		<Console name="Console" target="SYSTEM_OUT">
+			<PatternLayout pattern="%-5p - %m%n" />
+		</Console>
+		<RollingFile name="File" fileName="${filename}"
+			filePattern="logs/$${date:yyyy-MM}/app-%d{MM-dd-yyyy}-%i.log">
+			<PatternLayout pattern="%m%n" />
+			<Policies>
+				<SizeBasedTriggeringPolicy size="1 GB" />
+			</Policies>
+			<DefaultRolloverStrategy max="100" />
+		</RollingFile>
+	</Appenders>
+	<Loggers>
+		<Logger name="com.mastercard.apie.axon" level="INFO"> 
+			<AppenderRef ref="File"/>
+			<AppenderRef ref="Console" /> 
+		</Logger>
+		<Root level="INFO">
+			<AppenderRef ref="Console" />
+			<AppenderRef ref="File" />
+		</Root>
+	</Loggers>
+</Configuration>

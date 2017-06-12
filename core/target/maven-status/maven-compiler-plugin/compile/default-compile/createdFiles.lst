@@ -1,0 +1,12 @@
+com\aem\core\sling\models\ModelTest.class
+com\aem\core\sling\models\Test.class
+com\aem\core\servlets\Test.class
+com\aem\core\services\QueryBuilderUtil.class
+com\aem\core\package-info.class
+com\aem\core\sling\models\TestModel.class
+com\aem\core\sling\models\ModelComponent.class
+com\aem\core\workflow\process\SendEmailNotification.class
+com\aem\core\services\ResourceResolverUtil.class
+com\aem\core\constants\ApplicationConstants.class
+com\aem\core\sling\models\ScheduledCronJob.class
+com\aem\core\sling\models\ModelTest$1.class

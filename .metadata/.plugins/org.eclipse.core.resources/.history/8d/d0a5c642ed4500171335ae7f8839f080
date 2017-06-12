@@ -1,0 +1,48 @@
+# Bootstrap servers - list of brokers used for bootstrapping.
+bootstrap.servers=rt01.axon.sandbox02.dev.mastercard.int:9094, rt02.axon.sandbox02.dev.mastercard.int:19094, rt03.axon.sandbox02.dev.mastercard.int:9094	
+
+# Schema Registry URL. Ex. http(s)://host:port
+schemareg.url=https://sr.axon.sandbox02.dev.mastercard.int:8081
+
+# The group name or id of this consumer group. This group id is used to keep track of
+# messages consumed by this consumer. If you have multiple consumers having the same
+# group.id and are subscribed to same topic, then only one of the consumers will receive
+# the message. Make sure to have a different group.id for different consumers subscribing
+# to same topic so that all the consumers will receive the same message in parallel.   
+group.id=IntegrationAndPlatformServices.IntegrationServices.helloworldsub
+
+# What to do when there is no initial offset committed in Axon. This decides from where to start
+# consumption of messages when you are the new consumer - from beginning? or from latest?
+# 
+# Options are,
+#	earliest: automatically reset the offset to the earliest offset
+#	latest: automatically reset the offset to the latest offset
+#	none: throw exception to the consumer if no previous offset is found for the consumer's group
+#	anything else: throw exception to the consumer.
+auto.offset.reset=earliest
+
+# When do I declare I have consumed the message? After x ms?
+auto.commit.interval.ms=100
+
+
+
+# This setting controls how many records are pulled from Axon Server by the Consumer. SDK internally uses this to fetch these
+# many records from Axon server every time a receiveMessages() is called or by an internal thread within SDK that calls MessageListener.onMessage().
+#
+# This setting ensures fair consumption across all the partitions and limits failures within the consumer code to only those records.
+# If the consumer client want to limit the application processing logic failures to a small number, they should configure max.poll.records
+# to be small.
+# If this setting is not set, the default value is 2147483647 (Integer.MAX_VALUE)
+#max.poll.records=500
+
+# Enable SSL
+security.protocol=SSL
+#Provide information about trust stores
+ssl.truststore.location=src/main/resources/security/consumer-truststore.jks
+ssl.truststore.password=trustMe
+
+#Enable Client Authentication on SSL
+# Provide information about private key
+ssl.key.password=changeMe
+ssl.keystore.location=src/main/resources/security/consumer-keystore.jks
+ssl.keystore.password=changeMe

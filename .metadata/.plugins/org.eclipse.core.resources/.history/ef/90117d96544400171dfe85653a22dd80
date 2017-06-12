@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Kafka_schemaregistery
+Bundle-SymbolicName: kafka_schemaregistery
+Bundle-Version: 1.0.0
+Export-Package: io.confluent.kafka.schemaregistry.client.rest.exceptions,
+ io.confluent.kafka.schemaregistry.client.rest.utils,
+ io.confluent.kafka.schemaregistry.avro,
+ io.confluent.kafka.schemaregistry.client,
+ io.confluent.kafka.schemaregistry.client.rest.entities.requests,
+ io.confluent.kafka.schemaregistry.client.rest.entities,
+ io.confluent.kafka.schemaregistry.client.rest
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><components xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0">
+    <scr:component enabled="true" immediate="true" name="com.aem.core.workflow.process.SendEmailNotification">
+        <implementation class="com.aem.core.workflow.process.SendEmailNotification"/>
+        <service servicefactory="false">
+            <provide interface="com.adobe.granite.workflow.exec.WorkflowProcess"/>
+        </service>
+        <property name="process.label" value="GDPR:Send Notification to Product Owner"/>
+        <property name="service.vendor" value="Adobe"/>
+        <property name="service.pid" value="com.aem.core.workflow.process.SendEmailNotification"/>
+        <reference name="resourceResolverUtil" interface="com.aem.core.services.ResourceResolverUtil" cardinality="1..1" policy="static" bind="bindResourceResolverUtil" unbind="unbindResourceResolverUtil"/>
+        <reference name="querybuilderutil" interface="com.aem.core.services.QueryBuilderUtil" cardinality="1..1" policy="static" bind="bindQuerybuilderutil" unbind="unbindQuerybuilderutil"/>
+        <reference name="messageGatewayService" interface="com.day.cq.mailer.MessageGatewayService" cardinality="1..1" policy="static" bind="bindMessageGatewayService" unbind="unbindMessageGatewayService"/>
+    </scr:component>
+</components>

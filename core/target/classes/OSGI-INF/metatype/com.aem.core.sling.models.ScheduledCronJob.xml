@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><metatype:MetaData xmlns:metatype="http://www.osgi.org/xmlns/metatype/v1.0.0" localization="OSGI-INF/metatype/com.aem.core.sling.models.ScheduledCronJob">
+    <OCD id="com.aem.core.sling.models.ScheduledCronJob" name="%com.aem.core.sling.models.ScheduledCronJob.name" description="%com.aem.core.sling.models.ScheduledCronJob.description">
+        <AD id="scheduler.expression" type="String" default="0\ *\ *\ *\ *\ ?" name="%com.aem.core.sling.models.ScheduledCronJob.scheduler.expression.name" description="%com.aem.core.sling.models.ScheduledCronJob.scheduler.expression.description"/>
+        <AD id="api.endpoint" type="String" default="" name="%com.aem.core.sling.models.ScheduledCronJob.api.endpoint.name" description="%com.aem.core.sling.models.ScheduledCronJob.api.endpoint.description"/>
+        <AD id="json.path" type="String" default="/etc/designs/gdpr/serviceKeysData" name="%com.aem.core.sling.models.ScheduledCronJob.json.path.name" description="%com.aem.core.sling.models.ScheduledCronJob.json.path.description"/>
+    </OCD>
+    <Designate pid="com.aem.core.sling.models.ScheduledCronJob">
+        <Object ocdref="com.aem.core.sling.models.ScheduledCronJob"/>
+    </Designate>
+</metatype:MetaData>

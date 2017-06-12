@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="com.mastercard.apie.axon.sdk.core.AxonService"/>
+<fullyQualifiedTypeName name="com.mastercard.apie.axon.sdk.core.AxonServiceProducer"/>
+<fullyQualifiedTypeName name="aQute.lib.osgi.Constants"/>
+<fullyQualifiedTypeName name="com.mastercard.apie.axon.sdk.core.AxonMessage"/>
+<fullyQualifiedTypeName name="org.slf4j.LoggerFactory"/>
+<fullyQualifiedTypeName name="java.util.logging.Logger"/>
+<fullyQualifiedTypeName name="java.io.PrintWriter"/>
+</qualifiedTypeNameHistroy>

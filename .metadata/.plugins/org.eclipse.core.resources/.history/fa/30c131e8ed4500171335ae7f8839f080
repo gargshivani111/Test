@@ -1,0 +1,41 @@
+# Bootstrap servers - list of brokers used for bootstrapping.
+bootstrap.servers=rt01.axon.sandbox02.dev.mastercard.int:9094, rt02.axon.sandbox02.dev.mastercard.int:19094, rt03.axon.sandbox02.dev.mastercard.int:9094
+
+# Schema Registry URL. Ex. http(s)://host:port
+schemareg.url=https://sr.axon.sandbox02.dev.mastercard.int:8081
+
+
+# Batching of messages per partition (in bytes) to be sent to Axon server. A small batch size will make
+# batching less common and may reduce throughput (a batch size of zero will disable batching entirely).
+# A very large batch size may use memory a bit more wastefully as we will always allocate a buffer of
+# the specified batch size in anticipation of additional records.
+batch.size=40000
+
+# Controls the maximum amount of time the SDK will wait for the response of a request. If the response
+# is not received before the timeout elapses, the SDK will resend the request if necessary or fail the
+# request if retries are exhausted.
+request.timeout.ms=90000
+
+# Setting a value greater than zero will cause the SDK to resend any record whose send fails with a
+# potentially transient error. This retry is no different than if the producer client resent the record
+# upon receiving the error.
+# Note that allowing retries will potentially change the ordering of records because if two records are
+# sent to a single partition, and the first fails and is retried but the second succeeds, then the second
+# record may appear first.
+retries=0
+
+
+##Client Id###
+client.id=C1
+
+# Enable SSL
+security.protocol=SSL
+#Provide information about trust stores
+ssl.truststore.location=src/main/resources/security/producer-truststore.jks
+ssl.truststore.password=trustMe
+
+#Enable Client Authentication on SSL
+# Provide information about private key
+ssl.key.password=changeMe
+ssl.keystore.location=src/main/resources/security/producer-keystore.jks
+ssl.keystore.password=changeMe
